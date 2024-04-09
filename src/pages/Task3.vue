@@ -1,8 +1,9 @@
 <template>
-  <h1 class="text-6xl">Task 3</h1>
-  <ul>
-    <li class="" v-for="user in store.users" key="user.id">
-      {{ user.name }}
+  <h1 class="text-6xl mb-6">Task 3</h1>
+  <Search />
+  <ul class="flex flex-col gap-2">
+    <li class="" v-for="user in store.filteredUsers" :key="user.id">
+      <UserCard :user="user" />
     </li>
     <ErrorMsg error="store.error" v-if="store.error" />
   </ul>
@@ -13,15 +14,13 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import ErrorMsg from "../components/ErrorMsg.vue";
+import UserCard from "../components/UserCard.vue";
+import Search from "../components/Search.vue";
 import { useUsersStore } from "../stores/users";
 
 const store = useUsersStore();
 
-console.log(store.users);
-
 onMounted(() => {
-  console.log(store.users);
   store.getUsers();
-  console.log(store.users);
 });
 </script>
