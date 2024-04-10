@@ -7,7 +7,10 @@
     </li>
     <ErrorMsg error="store.error" v-if="store.error" />
   </ul>
-  <h2 v-if="store.loading" class="text-black text-4xl animate-pulse">
+  <h2
+    v-if="store.loading"
+    class="text-black text-4xl animate-pulse w-3/4 mx-auto"
+  >
     Loading...
   </h2>
 </template>
