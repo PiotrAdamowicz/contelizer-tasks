@@ -40,7 +40,6 @@ import { useUsersStore } from "../stores/users";
 import UserCardRow from "./UserCardRow.vue";
 import ActivityBadge from "./ActivityBadge.vue";
 import ButtonVue from "./ButtonVue.vue";
-import EditButton from "./EditButton.vue";
 
 const store = useUsersStore();
 const props = defineProps(["user"]);
