@@ -11,6 +11,7 @@
         id="pesel"
         class="p-2 w-full outline-none"
         type="text"
+        @keyup.enter="validatePeselNumber(pesel)"
       />
       <button
         class="p-2 w-1/5 hover:bg-gray-400 transition-all hover:text-white"
