@@ -1,11 +1,12 @@
 import { defineStore } from "pinia";
-import { ref, defineModel, computed } from "vue";
+import { ref, computed, reactive } from "vue";
 
 export const useUsersStore = defineStore("users", () => {
   const users = ref([]);
   const error = ref(null);
   const loading = ref(false);
   const search = ref(null);
+
   const filteredUsers = computed(() => {
     let filter = search.value;
     if (!filter || !filter.length) return users.value;
@@ -32,7 +33,24 @@ export const useUsersStore = defineStore("users", () => {
   function removeUser(id) {
     users.value = users.value.filter((user) => user.id !== id);
   }
-  function updateUser(id) {}
+  function updateUser(id, data) {
+    const user = users.value.find((user) => user.id == id);
+
+    if (user) {
+      user.gender = data.gender;
+      user.name = data.name;
+      user.email = data.email;
+    }
+  }
   getUsers();
-  return { removeUser, filteredUsers, users, getUsers, error, loading, search };
+  return {
+    updateUser,
+    removeUser,
+    filteredUsers,
+    users,
+    getUsers,
+    error,
+    loading,
+    search
+  };
 });
