@@ -1,6 +1,6 @@
 <template>
   <div class="sm:w-3/4 mx-auto">
-    <h1 class="text-6xl mb-6">Task 3</h1>
+    <Description :text="taskDescriptionText" task="Task 3" />
     <Search />
     <ul class="flex flex-col gap-2">
       <li class="" v-for="user in store.filteredUsers" :key="user.id">
@@ -19,10 +19,13 @@ import ErrorMsg from "../components/ErrorMsg.vue";
 import UserCard from "../components/UserCard.vue";
 import Search from "../components/Search.vue";
 import { useUsersStore } from "../stores/users";
+import Description from "../components/Description.vue";
 
 const store = useUsersStore();
 
 onMounted(() => {
   store.getUsers();
 });
+const taskDescriptionText =
+  "Write Vue3 app fetching API data from https://gorest.co.in/. App should have user list view (from API) and options for searching and editing users.";
 </script>

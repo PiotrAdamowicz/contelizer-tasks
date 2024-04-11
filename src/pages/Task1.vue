@@ -1,6 +1,6 @@
 <template>
   <div class="sm:w-4/5 mx-auto">
-    <h1 class="text-6xl">Task 1</h1>
+    <Description :text="taskDescriptionText" task="Task 1" />
     <div
       class="my-4 border-2 flex border-black rounded divide-x-2 divide-black"
     >
@@ -35,6 +35,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import { jumbleWord } from "../utils/text";
+import Description from "../components/Description.vue";
 
 const file = ref(null);
 const jumbledText = ref(null);
@@ -65,4 +66,6 @@ const submitFile = async () => {
     jumbledText.value = jumbleWord(data.file);
   };
 };
+const taskDescriptionText =
+  "Write program in Vue3 with form taking text file and then randomly change letter order in every row excluding first and last letter of a word. Take in consideration punctuations, capital/lower case letters, multiline texts, polish sings.";
 </script>

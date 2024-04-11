@@ -1,6 +1,6 @@
 <template>
   <div class="sm:w-3/4 mx-auto">
-    <h1 class="text-6xl">Task 2</h1>
+    <Description :text="taskDescriptionText" task="Task 2" />
     <div
       class="w-full mx-auto my-4 border-2 flex border-black rounded divide-x-2 divide-black"
     >
@@ -23,7 +23,6 @@
         Sprawdź
       </button>
     </div>
-    <!-- TODO: container to make msgs not visible at load? -->
     <!-- VALID -->
     <div v-if="isValid" class="">
       <h2 class="text-green-500 font-bold">Numer jest poprawny.</h2>
@@ -37,8 +36,11 @@
 <script setup>
 import { ref } from "vue";
 import { usePeselValidation } from "../composables/usePeselValidation";
+import Description from "../components/Description.vue";
 
 const pesel = ref(null);
 
 const { isValid, message, validatePeselNumber } = usePeselValidation();
+const taskDescriptionText =
+  "Write program in Vue3 to validate PESEL number according to official specification. Write unit test for invalid and valid numbers (at least one valid).";
 </script>
