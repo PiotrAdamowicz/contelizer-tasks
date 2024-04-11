@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <nav class="m-4 flex gap-2">
+  <nav class="mx-2 my-2 sm:mr-0 w-full sm:w-1/6 flex sm:flex-col gap-2">
     <RouterLink
       class="px-4 py-2 rounded border-2 border-black transition-all hover:bg-gray-200"
       to="/"
@@ -20,7 +20,7 @@ import { RouterLink, RouterView } from "vue-router";
       >Task 3</RouterLink
     >
   </nav>
-  <main class="m-2">
+  <main class="m-2 sm:m-0 grow sm:w-5/6">
     <suspense>
       <RouterView />
     </suspense>
