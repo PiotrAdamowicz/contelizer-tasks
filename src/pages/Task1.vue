@@ -54,7 +54,6 @@ const submitFile = async () => {
   const reader = new FileReader();
   reader.readAsText(file.value);
   reader.onload = async () => {
-    // console.log(reader.result.split(","));
     const encodedFile = reader.result;
     const data = {
       file: encodedFile,

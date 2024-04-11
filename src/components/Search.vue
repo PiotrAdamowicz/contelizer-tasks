@@ -1,8 +1,10 @@
 <template>
   <div
-    class="sm:w-3/4 mx-auto my-4 border-2 flex border-black rounded divide-x-2 divide-black"
+    class="sm:w-full mx-auto my-4 border-2 flex border-black rounded divide-x-2 divide-black"
   >
-    <label for="search" class="p-2 w-1/5 text-center">Filter users:</label>
+    <label for="search" class="p-2 w-1/5 text-sm sm:text-base text-center"
+      >Filter users:</label
+    >
     <input
       v-model="store.search"
       placeholder="Input user name"
