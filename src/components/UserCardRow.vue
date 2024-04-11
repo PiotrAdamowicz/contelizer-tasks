@@ -7,7 +7,7 @@
       v-if="editActive"
       :placeholder="props.value"
       type="text"
-      class="sm:text-xl w-fit text-gray-400 focus:text-black outline-none"
+      class="sm:text-xl w-fit text-gray-400 focus:text-black outline-none px-1 rounded"
     />
   </p>
 </template>

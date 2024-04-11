@@ -1,13 +1,9 @@
 <template>
-  <div v-if="valid">
-    <h2 class="font-bold text-green-500">
-      {{ message }}
-    </h2>
+  <div v-if="valid" class="bg-green-500 p-2 rounded">
+    <h2 class="font-bold text-white">{{ message }}</h2>
   </div>
-  <div v-if="!valid">
-    <h2 class="font-bold text-red-500">
-      {{ error }}
-    </h2>
+  <div v-if="!valid" class="bg-red-500 p-2 rounded">
+    <h2 class="font-bold text-white">{{ error }} !</h2>
   </div>
 </template>
 <script setup>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full mx-auto my-4 border-2 flex border-black rounded divide-x-2 divide-black"
+    class="w-full mx-auto my-4 border-2 flex border-black rounded divide-x-2 divide-black shadow-xl shadow-sky-900"
   >
     <label for="pesel" class="p-2 w-1/5 text-center text-sm sm:text-base"
       >PESEL:</label

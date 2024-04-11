@@ -1,6 +1,6 @@
 <template>
   <div
-    class="sm:w-full mx-auto h-fit flex flex-col gap-2 border-2 border-black rounded p-4"
+    class="sm:w-full mx-auto h-fit flex flex-col gap-2 border-2 border-black rounded p-4 shadow-md shadow-sky-900"
   >
     <UserCardRow
       v-model="formState.name"

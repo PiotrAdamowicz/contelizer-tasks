@@ -1,10 +1,12 @@
 <template>
-  <div class="my-4 border-2 flex border-black rounded divide-x-2 divide-black">
+  <div
+    class="my-4 border-2 flex border-black rounded divide-x-2 divide-black shadow-md shadow-sky-900"
+  >
     <input
       type="file"
       id="file"
       name="file"
-      class="p-2 w-full outline-none"
+      class="p-2 w-full outline-none bg-transparent"
       @change="handelUpload"
       accept=".txt,"
     />
