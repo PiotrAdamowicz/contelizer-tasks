@@ -3,6 +3,7 @@ import { checPeselControlNumber, checkPeselLength } from "../utils/validation";
 
 export function usePeselValidation() {
   const isValid = ref(false);
+  const show = ref(false);
   const message = ref(null);
 
   function validatePeselNumber(number) {
@@ -18,7 +19,8 @@ export function usePeselValidation() {
     } else {
       isValid.value = true;
     }
+    show.value = true;
   }
 
-  return { isValid, message, validatePeselNumber };
+  return { isValid, message, validatePeselNumber, show };
 }
