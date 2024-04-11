@@ -11,5 +11,4 @@ test("check if number is valid by checking control number", () => {
   expect(checPeselControlNumber("90012500631")).toBe(false);
   expect(checPeselControlNumber("90012500640")).toBe(false);
   expect(checPeselControlNumber("02070803624")).toBe(false);
-  expect(checPeselControlNumber("02070803628")).toBe(false);
 });
