@@ -1,5 +1,5 @@
 <template>
-  <nav class="mx-2 my-2 sm:mr-0 w-full sm:w-1/6 flex sm:flex-col gap-2">
+  <nav class="mx-2 my-2 sm:mr-0 sm:w-1/6 flex sm:flex-col gap-2">
     <RouterLink
       activeClass="active"
       class="px-4 py-2 rounded border-2 border-black transition-all hover:bg-sky-400"

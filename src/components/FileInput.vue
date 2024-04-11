@@ -29,3 +29,8 @@ const handelSubmit = () => {
   emit("submitFile");
 };
 </script>
+<style scoped>
+input::file-selector-button {
+  @apply bg-sky-700 rounded-lg border-0 px-3 py-1 cursor-pointer;
+}
+</style>

@@ -3,6 +3,7 @@
     <Description :text="taskDescriptionText" task="Task 2" />
     <PeselInput @handelValidation="validatePeselNumber" />
     <ValidationMessage
+      :show="show"
       message="Numer jest poprawny."
       :error="message"
       :valid="isValid"
