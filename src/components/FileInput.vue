@@ -11,7 +11,7 @@
       accept=".txt,"
     />
     <button
-      class="p-2 w-1/5 hover:bg-gray-400 transition-all hover:text-white"
+      class="p-2 w-1/5 hover:bg-sky-600 transition-all hover:text-white"
       type="submit"
       @click="handelSubmit"
     >
@@ -31,6 +31,6 @@ const handelSubmit = () => {
 </script>
 <style scoped>
 input::file-selector-button {
-  @apply bg-sky-700 rounded-lg border-0 px-3 py-1 cursor-pointer;
+  @apply bg-sky-700 rounded-lg border-0 px-3 py-1 cursor-pointer text-white;
 }
 </style>
