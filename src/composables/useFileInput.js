@@ -1,7 +1,7 @@
 import { computed } from "vue";
 import { jumbleWord } from "../utils/text";
 
-export const useFileSubmit = async (file, originalText, jumbledText) => {
+export const useFileSubmit = async (file, jumbledText, originalText) => {
   const fileExtension = computed(() =>
     fileName.value?.substr(fileName.value?.lastIndexOf(".") + 1)
   );
