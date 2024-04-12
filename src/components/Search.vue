@@ -2,7 +2,9 @@
   <div
     class="sm:w-full mx-auto my-4 border-2 flex border-black rounded divide-x-2 divide-black shadow-md shadow-sky-900"
   >
-    <label for="search" class="p-2 w-1/5 text-sm sm:text-base text-center"
+    <label
+      for="search"
+      class="p-2 w-1/5 text-sm sm:text-base md:text-xl flex justify-center items-center self-center mb-0 text-center"
       >Filter users:</label
     >
     <input
