@@ -14,7 +14,7 @@
   </div>
 </template>
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted } from "vue";
 import ErrorMsg from "../components/ErrorMsg.vue";
 import UserCard from "../components/UserCard.vue";
 import Search from "../components/Search.vue";

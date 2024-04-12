@@ -1,46 +1,22 @@
 <template>
   <div class="sm:w-3/4 mx-auto">
     <Description :text="taskDescriptionText" task="Task 2" />
-    <div
-      class="w-full mx-auto my-4 border-2 flex border-black rounded divide-x-2 divide-black"
-    >
-      <label for="pesel" class="p-2 w-1/5 text-center text-sm sm:text-base"
-        >PESEL:</label
-      >
-      <input
-        v-model="pesel"
-        placeholder="Wprowadz PESEL"
-        id="pesel"
-        class="p-2 w-full outline-none text-sm sm:text-base"
-        type="text"
-        @keyup.enter="validatePeselNumber(pesel)"
-      />
-      <button
-        class="p-2 w-fit sm:w-1/5 hover:bg-gray-400 transition-all hover:text-white text-sm sm:text-base"
-        type="submit"
-        @click="validatePeselNumber(pesel)"
-      >
-        Sprawdź
-      </button>
-    </div>
-    <!-- VALID -->
-    <div v-if="isValid" class="">
-      <h2 class="text-green-500 font-bold">Numer jest poprawny.</h2>
-    </div>
-    <!-- INVALID -->
-    <div v-if="!isValid" class="">
-      <p class="text-red-500 font-bold">{{ message }}</p>
-    </div>
+    <PeselInput @handelValidation="validatePeselNumber" />
+    <ValidationMessage
+      :show="show"
+      message="Numer jest poprawny."
+      :error="message"
+      :valid="isValid"
+    />
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
 import { usePeselValidation } from "../composables/usePeselValidation";
 import Description from "../components/Description.vue";
+import PeselInput from "../components/PeselInput.vue";
+import ValidationMessage from "../components/ValidationMessage.vue";
 
-const pesel = ref(null);
-
-const { isValid, message, validatePeselNumber } = usePeselValidation();
+const { isValid, message, validatePeselNumber, show } = usePeselValidation();
 const taskDescriptionText =
   "Write program in Vue3 to validate PESEL number according to official specification. Write unit test for invalid and valid numbers (at least one valid).";
 </script>
