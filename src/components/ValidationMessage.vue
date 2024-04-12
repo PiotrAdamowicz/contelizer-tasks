@@ -1,5 +1,5 @@
 <template>
-  <div v-if="show">
+  <div v-if="show" class="shadow-md shadow-sky-700">
     <div v-if="valid" class="bg-green-500 p-2 rounded">
       <h2 class="font-bold text-white">{{ message }}</h2>
     </div>
